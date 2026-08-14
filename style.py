@@ -49,7 +49,7 @@ def inject_css():
     st.markdown(
         f"""
         <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Great+Vibes&display=swap');
 
         html, body, [class*="css"] {{
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -84,6 +84,55 @@ def inject_css():
            the wildcard rule above because it's declared after it). */
         .sidebar-muted, .sidebar-muted * {{
             color: {COLORS['sidebar_text_muted']} !important;
+        }}
+
+        /* ---- Sidebar "Dataset info" mini stat row ---- */
+        .sidebar-stat-row {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: {COLORS['sidebar_bg_soft']};
+            border: 1px solid {COLORS['sidebar_border']};
+            border-radius: 10px;
+            padding: 0.55rem 0.85rem;
+            margin-bottom: 0.5rem;
+        }}
+        .sidebar-stat-label {{
+            font-size: 0.8rem;
+            color: {COLORS['sidebar_text_muted']} !important;
+        }}
+        .sidebar-stat-value {{
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #FFFFFF !important;
+        }}
+
+        /* ---- Signature, bottom of sidebar ---- */
+        .dev-signature-wrap {{
+            text-align: center;
+            margin-top: 1.6rem;
+            padding-top: 1rem;
+            border-top: 1px dashed {COLORS['sidebar_border']};
+        }}
+        .dev-signature {{
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.3rem;
+            line-height: 1;
+            margin: 0;
+            background: linear-gradient(90deg, #60A5FA 0%, #A78BFA 35%, #F472B6 70%, #FBBF24 100%);
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            color: transparent !important;
+            filter: drop-shadow(0 2px 8px rgba(96, 165, 250, 0.45));
+            letter-spacing: 0.01em;
+        }}
+        .dev-signature-sub {{
+            font-size: 0.62rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(232, 238, 244, 0.45) !important;
+            margin-top: -0.15rem;
         }}
 
         .block-container {{
