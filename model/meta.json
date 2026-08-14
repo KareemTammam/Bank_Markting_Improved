@@ -1,0 +1,1 @@
+{"best_model_name": "XGBoost", "n_samples": 11162, "n_features_raw": 15, "n_features_encoded": 44, "n_train": 8929, "n_test": 2233, "class_balance": {"0": 0.5262, "1": 0.4738}, "class_counts": {"0": 5873, "1": 5289}}
